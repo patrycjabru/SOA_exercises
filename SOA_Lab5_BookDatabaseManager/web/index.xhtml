@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<h:body>
+   <h:form>
+         <h:dataTable id="table_1" value="#{booksBean.books}" var="b">
+            <h:column>
+               <f:facet name="header">ISBN</f:facet>
+               #{b.isbn}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Title</f:facet>
+               #{b.title}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Author</f:facet>
+               #{b.author}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Year</f:facet>
+               #{b.year}
+            </h:column>
+
+             <h:column>
+                 <h:commandButton value="delete" update="@form" actionListener="#{booksBean.deleteBook(b)}"/>
+             </h:column>
+
+             <h:column>
+                 <h:commandButton value="update" action="update">
+                     <f:param name="book" value="#{b}" />
+                     <f:param name="isbn" value="#{b.isbn}" />
+                     <f:param name="title" value="#{b.title}" />
+                     <f:param name="author" value="#{b.author}" />
+                     <f:param name="year" value="#{b.year}" />
+                 </h:commandButton>
+             </h:column>
+         </h:dataTable>
+   </h:form><br/>
+    <h:form>
+        <h:commandButton value="add new book" action="add"/>
+    </h:form>
+</h:body>
+</html>

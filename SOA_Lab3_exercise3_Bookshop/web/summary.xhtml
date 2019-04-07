@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xml:lang="en" lang="en">
+<head>
+    <title>Summary</title>
+</head>
+<body>
+<h1>Summary page</h1>
+<h2>Number of selected books: </h2>
+<h:outputFormat value="#{bean.numberOfSelectedBooks}"></h:outputFormat><br/>
+<h2>Books value (in PLN): </h2>
+<h:outputFormat value="#{bean.totalSelectedBooksPrice}"></h:outputFormat>
+</body>
+</html>

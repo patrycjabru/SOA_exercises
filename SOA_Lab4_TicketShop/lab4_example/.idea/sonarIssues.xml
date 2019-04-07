@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/ejb3-server-impl.iml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/LoginBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/MainBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/Seat.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/SeatList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/SessionBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/TestAddBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/TestBeanCounter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-impl/src/main/java/pl/agh/kis/soa/ejb3/server/impl/UserList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/CheckedSeats.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/EJBContainer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/IndexView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/ReservationsView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/SeatWithCheck.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/SeatsList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/SeatsWithCheckListContainer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/SummaryView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/java/pl/agh/kis/soa/UserLoginData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/webapp/WEB-INF/web.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/webapp/error.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/webapp/index.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/webapp/reservation.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ejb3-server-war/src/main/webapp/summary.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

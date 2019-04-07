@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ejb3-server-war:war">
+    <output-path>$PROJECT_DIR$/ejb3-server-war/target</output-path>
+    <root id="archive" name="ejb3-server-war.war">
+      <element id="artifact" artifact-name="ejb3-server-war:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: pl.agh.kis.soa:ejb3-server-impl:ejb-client:client:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/pl/agh/kis/soa/ejb3-server-impl/1.0-SNAPSHOT/ejb3-server-impl-1.0-SNAPSHOT-client.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/pl/agh/kis/soa/ejb3-server-impl/1.0-SNAPSHOT/ejb3-server-impl-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/pl/agh/kis/soa/ejb3-server-impl/1.0-SNAPSHOT/ejb3-server-impl-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

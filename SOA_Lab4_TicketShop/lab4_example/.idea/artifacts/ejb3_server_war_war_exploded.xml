@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ejb3-server-war:war exploded">
+    <output-path>$PROJECT_DIR$/ejb3-server-war/target/ejb3-server-war</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ejb3-server-war" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="ejb3-server-impl-1.0-SNAPSHOT-client.jar">
+            <element id="artifact" artifact-name="ejb3-server-impl:ejb-client exploded" />
+          </element>
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/ejb3-server-war/target/ejb3-server-war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="ejb3-server-war/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui" xml:lang="en" lang="en">
+<h:head>
+    <title>Summary</title>
+</h:head>
+<body>
+<h:form>
+    Choosen seats:
+    <h:dataTable value="#{summaryView.list}" var="s">
+        <h:column>
+            <!-- column header -->
+            <f:facet name="header">Row</f:facet>
+            <!-- row record -->
+            #{s.seat.row}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Column</f:facet>
+            #{s.seat.column}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Price</f:facet>
+            #{s.seat.price}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Is Reserved</f:facet>
+            #{s.seat.isReserved}
+        </h:column>
+    </h:dataTable>
+    <p:commandButton value="buy" action="#{summaryView.buy}" />
+</h:form>
+</body>
+</html>

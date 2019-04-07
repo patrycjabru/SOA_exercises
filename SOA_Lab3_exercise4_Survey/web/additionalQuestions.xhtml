@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core" xml:lang="en" lang="en">
+<head>
+    <title>Additional Questions</title>
+</head>
+<body>
+    <h:form>
+        How much are you willing to spend on shopping monthly? <br/>
+        <h:selectOneRadio value="#{surveyBean.actualHowMuchMoneyPerMothOptionNumber}" required="true">
+            <f:selectItem itemValue="under 100 PLN" itemLabel="under 100 PLN" />
+            <f:selectItem itemValue="100 - 500 PLN" itemLabel="100 - 500 PLN" />
+            <f:selectItem itemValue="500 - 1000 PLN" itemLabel="500 - 1000 PLN" />
+            <f:selectItem itemValue="above 1000 PLN" itemLabel="above 1000 PLN" />
+        </h:selectOneRadio> <br/>
+        How often are you buying clothes? <br/>
+        <h:selectOneRadio value="#{surveyBean.actualHowOftenDoYouBuyClothesOptionNumber}" required="true">
+            <f:selectItem itemValue="Everyday" itemLabel="Everyday" />
+            <f:selectItem itemValue="Once a week" itemLabel="Once a week" />
+            <f:selectItem itemValue="Once a mouth" itemLabel="Once a mouth" />
+            <f:selectItem itemValue="Few times a year" itemLabel="Few times a year" />
+        </h:selectOneRadio> <br/>
+        What colors do you prefer? <br/>
+        <h:selectManyCheckbox value="#{surveyBean.actualWhatColorsDoYouPreferOptionNumbers}" required="true">
+            <f:selectItem itemValue="Vibrant colors" itemLabel="Vibrant colors" />
+            <f:selectItem itemValue="Pastel colors" itemLabel="Pastel colors" />
+            <f:selectItem itemValue="Gray" itemLabel="Gray"/>
+            <f:selectItem itemValue="White" itemLabel="White"/>
+            <f:selectItem itemValue="Black" itemLabel="Black"/>
+            <f:selectItem itemValue="Bronze" itemLabel="Bronze"/>
+        </h:selectManyCheckbox> <br/>
+        <c:choose>
+            <c:when test="#{surveyBean.actualGender==null}">
+
+            </c:when>
+            <c:when test="#{surveyBean.checkGender('Male')}">
+                What clothes do you usually buy? <br/>
+                <h:selectManyCheckbox value="#{surveyBean.actualWhatClothesDoYouUsuallyBuy}" required="true">
+                    <f:selectItem itemValue="Trousers" itemLabel="Trousers" />
+                    <f:selectItem itemValue="Shorts" itemLabel="Shorts" />
+                    <f:selectItem itemValue="Suits" itemLabel="Suits" />
+                    <f:selectItem itemValue="Shirts" itemLabel="Shirts" />
+                    <f:selectItem itemValue="Ties" itemLabel="Ties" />
+                </h:selectManyCheckbox>
+            </c:when>
+            <c:otherwise>
+                What clothes do you usually buy? <br/>
+                <h:selectManyCheckbox value="#{surveyBean.actualWhatClothesDoYouUsuallyBuy}" required="true">
+                    <f:selectItem itemValue="Suits" itemLabel="Suits" />
+                    <f:selectItem itemValue="Blouses" itemLabel="Blouses" />
+                    <f:selectItem itemValue="Skirts" itemLabel="Skirts" />
+                    <f:selectItem itemValue="Trousers" itemLabel="Trousers" />
+                </h:selectManyCheckbox>
+            </c:otherwise>
+        </c:choose>
+        <h:commandButton value="Submit" action="summary"></h:commandButton>
+    </h:form>
+</body>
+</html>

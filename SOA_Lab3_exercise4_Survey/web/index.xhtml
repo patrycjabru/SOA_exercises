@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+   <h:head>
+
+   </h:head>
+   <h:body>
+      <h1>Survey</h1>
+      <h:form>
+         Name <br/>
+         <h:inputText value="#{surveyBean.actualName}" required="true"/> <br/>
+         Email <br/>
+         <h:inputText value="#{surveyBean.actualEmail}" required="true">
+            <f:validator validatorId="emailValidator" />
+         </h:inputText> <br/>
+         Age <br/>
+         <h:inputText id="age" value="#{surveyBean.actualAge}" required="true">
+            <f:validateDoubleRange minimum="10" maximum="100" for="age"/>
+         </h:inputText> <br/>
+         Gender <br/>
+         <h:selectOneRadio value="#{surveyBean.actualGender}" onchange = "submit()" valueChangeListener="#{surveyBean.changedGenderListener}" required="true">
+            <f:selectItem itemValue="Male" itemLabel="Male" />
+            <f:selectItem itemValue="Female" itemLabel="Female" />
+         </h:selectOneRadio> <br/>
+         Education <br/>
+         <h:selectOneRadio value="#{surveyBean.actualEducation}" required="true">
+            <f:selectItem itemValue="Primary" itemLabel="Primary" />
+            <f:selectItem itemValue="Middle" itemLabel="Middle" />
+            <f:selectItem itemValue="Higher" itemLabel="Higher" />
+         </h:selectOneRadio> <br/>
+         Height <br/>
+         <h:inputText value="#{surveyBean.actualHeight}" required="true">
+            <f:attribute name="gender" value="#{surveyBean.actualGender}" />
+            <f:validator validatorId="heightValidator"/>
+         </h:inputText> <br/>
+         <c:choose>
+            <c:when test="#{surveyBean.actualGender==null}">
+
+            </c:when>
+            <c:when test="#{surveyBean.checkGender('Male')}">
+               Chest Circuit <br/>
+               <h:inputText value="#{surveyBean.maleDetails.chestCircuit}"/> <br/>
+               Waist Circuit <br/>
+               <h:inputText value="#{surveyBean.maleDetails.waitsCircuit}"/> <br/>
+            </c:when>
+            <c:otherwise>
+               Bust Circuit <br/>
+               <h:inputText value="#{surveyBean.femaleDetails.bustCircuit}"/> <br/>
+               Cup size <br/>
+               <h:inputText value="#{surveyBean.femaleDetails.cupSize}" /> <br/>
+               Waist Circuit <br/>
+               <h:inputText value="#{surveyBean.femaleDetails.waistCircuit}"/> <br/>
+               Hips Circuit <br/>
+               <h:inputText value="#{surveyBean.femaleDetails.hipsCircuit}"/> <br/>
+            </c:otherwise>
+         </c:choose>
+         <h:commandButton value="Submit" action="additionalQuestions"/>
+      </h:form>
+      <h:form>
+         <h:commandLink action="#{commercials.redirect}">
+            <h:graphicImage value="#{commercials.randomCommercial}" width="150" height="200"/>
+         </h:commandLink> <br/>
+         Clicks:
+         <h:outputFormat value="#{commercials.counter}"/>
+      </h:form>
+   </h:body>
+</html>

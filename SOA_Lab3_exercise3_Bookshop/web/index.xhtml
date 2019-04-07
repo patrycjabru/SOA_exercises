@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:head>
+
+   </h:head>
+   <h:body>
+      <!--<h:form>-->
+      <h3>Book List</h3>
+      <h2>Show price in PLN</h2>
+      <h:form>
+         <h:selectOneRadio value="#{bean.priceInPLN}" onchange = "submit()" valueChangeListener="#{bean.priceDisplayChanged}">
+            <f:selectItem itemValue="true" itemLabel="YES" />
+            <f:selectItem itemValue="false" itemLabel="NO" />
+         </h:selectOneRadio>
+      </h:form>
+      <h:form>
+         <h2>Exclude categories</h2>
+         <h:selectManyCheckbox
+                 value="#{bean.excludedCategories}" onchange = "submit()" valueChangeListener="#{bean.categoriesDisplayChanged}">
+            <f:selectItems value="#{bean.allCategories}" var="elem" itemLabel="#{elem}" itemValue="#{elem}" />
+         </h:selectManyCheckbox>
+      </h:form>
+      <h:form>
+         <h:dataTable value="#{bean.books}" var="b">
+            <h:column>
+               <!-- column header -->
+               <f:facet name="header">Name</f:facet>
+               <!-- row record -->
+               #{b.title}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Description</f:facet>
+               #{b.author}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Category</f:facet>
+               #{b.category}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Price</f:facet>
+               #{b.price}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Currency</f:facet>
+               #{b.currency}
+            </h:column>
+
+            <h:column>
+               <f:facet name="header">Check</f:facet>
+               <h:selectBooleanCheckbox value="#{b.isSelected}"></h:selectBooleanCheckbox>
+            </h:column>
+
+         </h:dataTable>
+         <h:commandButton action="summary" value="Submit"></h:commandButton>
+      </h:form>
+      <!--</h:form>-->
+   </h:body>
+</html>

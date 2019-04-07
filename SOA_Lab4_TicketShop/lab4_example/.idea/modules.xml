@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ejb3-server-impl/ejb3-server-impl.iml" filepath="$PROJECT_DIR$/ejb3-server-impl/ejb3-server-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejb3-server-war/ejb3-server-war.iml" filepath="$PROJECT_DIR$/ejb3-server-war/ejb3-server-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab4_example.iml" filepath="$PROJECT_DIR$/lab4_example.iml" />
+    </modules>
+  </component>
+</project>
