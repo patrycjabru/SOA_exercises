@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<head>
+    <title>Statistics</title>
+</head>
+<body>
+<h:form>
+    Top books: <br/>
+        <h:dataTable id="table_1" value="#{searchBean.topBooks}" var="b">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{b.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                #{b.title}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Author</f:facet>
+                #{b.author}
+            </h:column>
+        </h:dataTable><br/>
+        <h:commandButton value="add new book" action="addbook"/>
+        <h:commandButton value="return" action="/index"/>
+</h:form>
+</body>
+</html>

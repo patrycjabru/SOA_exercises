@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<h:head>
+    <title>Books</title>
+</h:head>
+<h:body>
+    <h:form>
+        Filters<br/>
+        ID: <br/>
+        <h:inputText value="#{mainBean.bookFilter.id}"/><br/>
+        Title: <br/>
+        <h:inputText value="#{mainBean.bookFilter.title}"/><br/>
+        Author: <br/>
+        <h:selectOneMenu value="#{mainBean.authorId}">
+            <f:selectItem itemValue="" itemLabel="All"/>
+            <f:selectItems value="#{mainBean.authors}" var="a"
+                           itemLabel="#{a}" itemValue="#{a.id}" />
+        </h:selectOneMenu><br/>
+        <h:commandButton value="search">
+            <f:ajax execute="@form" render="@form" />
+        </h:commandButton>
+
+        <h:dataTable id="table_1" value="#{mainBean.books}" var="b">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{b.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                #{b.title}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Author</f:facet>
+                #{b.author}
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="delete" update="@form" actionListener="#{mainBean.deleteBook(b)}"/>
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="update" action="updatebook">
+                    <f:param name="id" value="#{b.id}" />
+                    <f:param name="title" value="#{b.title}" />
+                    <f:param name="author" value="#{b.author}" />
+                </h:commandButton>
+            </h:column>
+        </h:dataTable>
+    </h:form><br/>
+    <h:form>
+        <h:commandButton value="add new book" action="addbook"/>
+    </h:form>
+</h:body><br/>
+<h:form>
+    <h:commandButton value="return" action="index"/>
+</h:form>
+</html>

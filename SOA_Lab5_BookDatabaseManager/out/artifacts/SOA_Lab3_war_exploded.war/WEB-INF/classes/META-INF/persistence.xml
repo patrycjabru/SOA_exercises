@@ -6,15 +6,7 @@
         <jta-data-source>java:/MySqlDS</jta-data-source>
         <class>pl.agh.kis.soa.Book</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://mysql.agh.edu.pl:3306/bruzdzin"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username" value="bruzdzin"/>
-            <property name="hibernate.connection.password" value="CPHym5f26bGrjqDG"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
-            <property name="hibernate.archive.autodetection" value="class,"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-            <property name="hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

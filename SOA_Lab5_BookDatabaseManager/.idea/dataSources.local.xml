@@ -11,5 +11,14 @@
       <user-name>bruzdzin</user-name>
       <introspection-schemas>*:bruzdzin</introspection-schemas>
     </data-source>
+    <data-source name="MySqlDS/Hibernate" uuid="e8efbd42-2f6b-40af-af75-9a4d35228f18">
+      <database-info product="MySQL" version="5.5.62-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>bruzdzin</user-name>
+      <introspection-schemas>*:bruzdzin</introspection-schemas>
+    </data-source>
   </component>
 </project>

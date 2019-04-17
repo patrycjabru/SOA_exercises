@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<head>
+    <title>Update Book</title>
+</head>
+<body>
+<h:form>
+    You are now editing this book:<br/>
+    <h:outputFormat binding="#{id}" value="#{param.get('id')}"/> <br/>
+    <h:outputFormat binding="#{title}" value="#{param.get('title')}"/> <br/>
+    <h:outputFormat binding="#{author}" value="#{param.get('author')}"/> <br/>
+    <h:inputHidden value="#{id.value}"/>
+    Title: <br/>
+    <h:inputText value="#{title.value}"/> <br/>
+    Author: <br/>
+    <h:selectOneMenu value="#{author.value}">
+        <f:selectItems value="#{mainBean.authors}" var="a"
+                       itemLabel="#{a}" itemValue="#{a}" />
+    </h:selectOneMenu><br/>
+    <h:commandButton value="update" action="#{mainBean.updateBook(id.value,title.value,author.value)}" />
+</h:form>
+</body>
+</html>

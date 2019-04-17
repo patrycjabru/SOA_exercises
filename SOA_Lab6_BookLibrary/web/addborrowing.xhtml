@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<head>
+    <title>Add borrowing</title>
+</head>
+<body>
+<h:form>
+    Book: <br/>
+    <h:selectOneMenu binding="#{book_input}">
+        <f:selectItems value="#{mainBean.books}" var="a"
+                       itemLabel="#{a}" itemValue="#{a}" />
+    </h:selectOneMenu><br/>
+    Reader: <br/>
+    <h:selectOneMenu binding="#{reader_input}">
+        <f:selectItems value="#{mainBean.readers}" var="a"
+                       itemLabel="#{a}" itemValue="#{a}" />
+    </h:selectOneMenu>
+    Borrow date: <br/>
+    <h:inputText binding="#{borrowDate_input}">
+        <f:convertDateTime pattern="yyyy-MM-dd"/>
+    </h:inputText>
+    Reaturn date: <br/>
+    <h:inputText binding="#{returnDate_input}">
+        <f:convertDateTime pattern="yyyy-MM-dd"/>
+    </h:inputText>
+
+    <h:commandButton value="Add" action="#{mainBean.addBorrowing(book_input.value, reader_input.value,borrowDate_input.value,returnDate_input.value)}"/>
+</h:form><br/>
+<h:form>
+    <h:commandButton value="return" action="index"/>
+</h:form>
+</body>
+</html>

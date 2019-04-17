@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<h:head>
+    <title>Borrowings</title>
+</h:head>
+<h:body>
+    <h:form>
+        Filters<br/>
+        ID: <br/>
+        <h:inputText value="#{mainBean.borrowingFilter.id}"/><br/>
+        Reader:<br/>
+        <h:selectOneMenu value="#{mainBean.readerId}">
+            <f:selectItem itemLabel="All" itemValue=""/>
+            <f:selectItems value="#{mainBean.readers}" var="r"
+                               itemLabel="#{r}" itemValue="#{r.id}" />
+        </h:selectOneMenu><br/>
+        Book:<br/>
+        <h:selectOneMenu value="#{mainBean.bookId}">
+            <f:selectItem itemLabel="All" itemValue=""/>
+            <f:selectItems value="#{mainBean.books}" var="b"
+                       itemLabel="#{b}" itemValue="#{b.id}" />
+        </h:selectOneMenu><br/>
+        Borrow Date:<br/>
+        <h:inputText value="#{mainBean.borrowingFilter.borrow_date}">
+            <f:convertDateTime pattern="yyyy-MM-dd"/>
+        </h:inputText><br/>
+        Reaturn Date:<br/>
+        <h:inputText value="#{mainBean.borrowingFilter.return_date}">
+            <f:convertDateTime pattern="yyyy-MM-dd"/>
+        </h:inputText><br/>
+
+
+        <h:commandButton value="search">
+            <f:ajax execute="@form" render="@form" />
+        </h:commandButton><br/>
+
+        <h:dataTable id="table_1" value="#{mainBean.borrowings}" var="b">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{b.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Book</f:facet>
+                #{b.book}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Reader</f:facet>
+                #{b.reader}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Borrow Date</f:facet>
+                #{b.borrow_date}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Return Date</f:facet>
+                #{b.return_date}
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="delete" update="@form" actionListener="#{mainBean.deleteBorrowing(b)}"/>
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="update" action="updateborrowing">
+                    <f:param name="id" value="#{b.id}" />
+                    <f:param name="book" value="#{b.book}" />
+                    <f:param name="reader" value="#{b.reader}" />
+                    <f:param name="borrow_date" value="#{b.borrow_date}" />
+                    <f:param name="return_date" value="#{b.return_date}" />
+                </h:commandButton>
+            </h:column>
+
+        </h:dataTable>
+    </h:form><br/>
+    <h:form>
+        <h:commandButton value="add new borrowing" action="addborrowing"/>
+    </h:form><br/>
+    <h:form>
+        <h:commandButton value="return" action="index"/>
+    </h:form>
+</h:body>
+</html>

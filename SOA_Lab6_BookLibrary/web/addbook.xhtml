@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<head>
+    <title>Add book</title>
+</head>
+<body>
+<h1>Add new book</h1>
+<h:form>
+    Title: <br/>
+    <h:inputText binding="#{title_input}"/> <br/>
+    Author: <br/>
+    <h:selectOneMenu binding="#{author_input}">
+        <f:selectItems value="#{mainBean.authors}" var="a"
+                       itemLabel="#{a}" itemValue="#{a}" />
+    </h:selectOneMenu>
+    <h:commandButton value="Add" action="#{mainBean.addBook(title_input.value, author_input.value)}"/>
+</h:form><br/>
+<h:form>
+    <h:commandButton value="return" action="index"/>
+</h:form>
+</body>
+</html>

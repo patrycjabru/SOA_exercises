@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<h:head>
+    <title>Readers</title>
+</h:head>
+<h:body>
+    <h:form>
+        Filters<br/>
+        ID: <h:inputText value="#{mainBean.readerFilter.id}"/><br/>
+        Name: <h:inputText value="#{mainBean.readerFilter.name}"/><br/>
+        Surname: <h:inputText value="#{mainBean.readerFilter.surname}"/><br/>
+        <h:commandButton value="search">
+            <f:ajax execute="@form" render="@form" />
+        </h:commandButton>
+
+        <h:dataTable id="table_1" value="#{mainBean.readers}" var="r">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{r.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                #{r.name}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Surname</f:facet>
+                #{r.surname}
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="delete" update="@form" actionListener="#{mainBean.deleteReader(r)}"/>
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="update" action="updatereader">
+                    <f:param name="id" value="#{r.id}" />
+                    <f:param name="name" value="#{r.name}" />
+                    <f:param name="surname" value="#{r.surname}" />
+                </h:commandButton>
+            </h:column>
+        </h:dataTable>
+    </h:form><br/>
+    <h:form>
+        <h:commandButton value="add new reader" action="addreader"/>
+    </h:form><br/>
+    <h:form>
+        <h:commandButton value="return" action="index"/>
+    </h:form>
+</h:body>
+</html>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
-    <persistence-unit name="MySqlDS">
+    <persistence-unit name="BookLibrary">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:/MySqlDS</jta-data-source>
+        <jta-data-source>java:/BookLibrary</jta-data-source>
+        <class>pl.agh.kis.soa.Reader</class>
+        <class>pl.agh.kis.soa.Author</class>
         <class>pl.agh.kis.soa.Book</class>
+        <class>pl.agh.kis.soa.Borrowing</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
         </properties>
