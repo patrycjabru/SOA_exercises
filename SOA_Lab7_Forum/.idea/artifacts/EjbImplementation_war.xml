@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EjbImplementation:war">
+    <output-path>$PROJECT_DIR$/EjbImplementation/target</output-path>
+    <root id="archive" name="EjbImplementation-1.0.war">
+      <element id="artifact" artifact-name="EjbImplementation:war exploded" />
+    </root>
+  </artifact>
+</component>

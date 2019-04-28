@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/SessionManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/UserManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/local/SessionManagerLocal.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/local/UserManagerLocal.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/remote/SessiomManagerRemote.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbApi/src/main/java/ejb/interfaces/remote/UserManagerRemote.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbImplementation/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbImplementation/src/main/java/SessionManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbImplementation/src/main/java/ejb/implementation/SessionManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbImplementation/src/main/java/ejb/implementation/UserManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/EjbImplementation/src/main/java/ejb/implementation/UserManagerLocalImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/WebApp/src/main/java/SessionBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Forum/WebApp/src/main/webapp/index.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EjbApi/EjbApi.iml" filepath="$PROJECT_DIR$/EjbApi/EjbApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjbImplementation/EjbImplementation.iml" filepath="$PROJECT_DIR$/EjbImplementation/EjbImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOA_Lab7_Forum.iml" filepath="$PROJECT_DIR$/SOA_Lab7_Forum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebApp/WebApp.iml" filepath="$PROJECT_DIR$/WebApp/WebApp.iml" />
+    </modules>
+  </component>
+</project>
