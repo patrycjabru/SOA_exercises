@@ -28,7 +28,9 @@ public class UserDAO {
         predicates.add(cb.equal(hh.get("name"), login));
         predicates.add(cb.equal(hh.get("password"), password));
 
-        List<User> users = null;
+        query.where(predicates.toArray(new Predicate[] {}));
+
+        List<User> users = new LinkedList<User>();
         try {
             TypedQuery<User> q = em.createQuery(query);
             users = q.getResultList();

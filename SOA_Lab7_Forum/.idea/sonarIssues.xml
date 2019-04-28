@@ -8,7 +8,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/AbstractDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/CommentData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/Post.java">
           <value>
             <set />
           </value>
@@ -23,7 +33,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/Thread.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/ThreadData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/User.java">
           <value>
             <set />
           </value>
@@ -129,6 +149,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/index.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/main.xhtml">
           <value>
             <set />
           </value>

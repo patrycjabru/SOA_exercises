@@ -12,7 +12,7 @@ public class SessionManagerImpl implements SessionManager {
     private User user;
 
     public User getUser(Integer userId) {
-        return user;
+        return null;
     }
 
     public User loginUser(String username, String password) throws InvalidLoginCredentialsException {

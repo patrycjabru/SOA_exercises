@@ -1,4 +1,6 @@
 package ejb.dto;
 
-public abstract class AbstractDTO {
+import java.io.Serializable;
+
+public abstract class AbstractDTO implements Serializable{
 }

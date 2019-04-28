@@ -7,6 +7,9 @@
     <persistence-unit name="DataSource">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>java:/MySqlDS</jta-data-source>
+        <class>ejb.dto.User</class>
+        <class>ejb.dto.Post</class>
+        <class>ejb.dto.Thread</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
