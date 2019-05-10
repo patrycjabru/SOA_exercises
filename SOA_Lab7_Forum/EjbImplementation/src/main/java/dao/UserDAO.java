@@ -44,6 +44,31 @@ public class UserDAO {
         return users.get(0);
     }
 
+    public static User getUserById(int id) {
+        init();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+        Root<User> hh = query.from(User.class);
+        List<Predicate> predicates = new LinkedList<Predicate>();
+
+        predicates.add(cb.equal(hh.get("id"), id));
+
+        query.where(predicates.toArray(new Predicate[] {}));
+
+        List<User> users = new LinkedList<User>();
+        try {
+            TypedQuery<User> q = em.createQuery(query);
+            users = q.getResultList();
+        } catch (Exception e) {
+            System.err.println("Error when trying to retrieve data from database: " + e);
+        }
+
+        if (users == null || users.size() != 1)
+            return null;
+
+        return users.get(0);
+    }
+
     private static void init() {
         if (factory==null)
             factory = Persistence.createEntityManagerFactory("DataSource");

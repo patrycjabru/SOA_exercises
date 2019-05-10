@@ -16,11 +16,11 @@ public class SessionBean implements Serializable{
 
     @EJB(lookup="java:global/EjbImplementation-1.0/SessionManagerImpl")
     private SessionManager sessionManagerBean;
-    private User user;
 
     public String login(String login, String password) {
         try {
-            user = sessionManagerBean.loginUser(login,password);
+            User user = sessionManagerBean.loginUser(login,password);
+            UserData.setUser(user);
         } catch (InvalidLoginCredentialsException e) {
             e.printStackTrace();
         }
@@ -28,6 +28,6 @@ public class SessionBean implements Serializable{
     }
 
     public String getUsername() {
-        return user.getName();
+        return UserData.getUser().getName();
     }
 }

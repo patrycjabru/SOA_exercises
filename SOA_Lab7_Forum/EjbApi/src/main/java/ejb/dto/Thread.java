@@ -1,5 +1,7 @@
 package ejb.dto;
 
+import clojure.lang.IFn;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,9 +17,11 @@ public class Thread extends AbstractDTO {
     @Column(name = "title")
     private String title;
 
-    @OneToMany(mappedBy = "thread", orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "thread", orphanRemoval = true)
     private List<Post> posts;
 
+    @OneToMany(mappedBy = "thread", orphanRemoval = true)
+    private List<Subscription> subscriptions;
 
     public void setId(int id) {
         this.id = id;
@@ -41,5 +45,13 @@ public class Thread extends AbstractDTO {
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 }

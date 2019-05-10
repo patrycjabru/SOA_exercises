@@ -8,12 +8,22 @@
             <set />
           </value>
         </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/AbstractDTO.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/CommentData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/Notification.java">
           <value>
             <set />
           </value>
@@ -29,6 +39,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/SubscribtionData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/dto/Subscription.java">
           <value>
             <set />
           </value>
@@ -53,12 +68,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/interfaces/ContentManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/interfaces/NotificationManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/interfaces/SessionManager.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/interfaces/SubscribtionManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbApi/src/main/java/ejb/interfaces/SubscriptionManager.java">
           <value>
             <set />
           </value>
@@ -103,7 +133,47 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/ContentManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/NotificationManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/SessionManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/SubscriptionManagerImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/dao/DAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/dao/NotificationDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/dao/PostDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/dao/SubscriptionDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/dao/ThreadDAO.java">
           <value>
             <set />
           </value>
@@ -138,7 +208,67 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/jms/NotificationsHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EjbImplementation/src/main/java/jms/TopicHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/AddNewBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/ContentBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/MyListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/MyReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/MySender.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/NotificationBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/WebApp/src/main/java/SessionBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/UserData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/jms/MyListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/jms/MyReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/java/jms/MySender.java">
           <value>
             <set />
           </value>
@@ -154,6 +284,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/main.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/newpost.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/newthread.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/notifications.xhtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/WebApp/src/main/webapp/posts.xhtml">
           <value>
             <set />
           </value>

@@ -1,6 +1,7 @@
 package ejb.dto;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "Post")
@@ -19,6 +20,9 @@ public class Post extends AbstractDTO {
 
     @Column(name = "content")
     private String content;
+
+    @Column(name="date")
+    private Date date;
 
     public int getId() {
         return id;
@@ -50,5 +54,13 @@ public class Post extends AbstractDTO {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

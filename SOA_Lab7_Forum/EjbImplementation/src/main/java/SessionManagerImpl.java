@@ -1,5 +1,3 @@
-package ejb.implementation;
-
 import dao.UserDAO;
 import ejb.dto.User;
 import ejb.exceptions.InvalidLoginCredentialsException;

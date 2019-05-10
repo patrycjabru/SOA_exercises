@@ -21,6 +21,16 @@ public class User extends AbstractDTO {
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private List<Post> posts;
 
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    private List<Notification> notifications;
+
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    private List<Subscription> subscriptions;
+
+    public String toString() {
+        return name;
+    }
+
     public int getId() {
         return id;
     }
@@ -51,5 +61,21 @@ public class User extends AbstractDTO {
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(List<Notification> notifications) {
+        this.notifications = notifications;
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 }

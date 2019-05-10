@@ -10,6 +10,8 @@
         <class>ejb.dto.User</class>
         <class>ejb.dto.Post</class>
         <class>ejb.dto.Thread</class>
+        <class>ejb.dto.Notification</class>
+        <class>ejb.dto.Subscription</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
