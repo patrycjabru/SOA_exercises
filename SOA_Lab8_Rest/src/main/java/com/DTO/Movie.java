@@ -1,10 +1,12 @@
 package com.DTO;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import com.fasterxml.jackson.annotation.*;
 
 @Entity
 @Table(name = "Movie")
-public class Movie {
+public class Movie implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
@@ -16,6 +18,7 @@ public class Movie {
     @Column(name = "uri")
     private String uri;
 
+    @JsonBackReference
     @ManyToOne
     private User user;
 

@@ -1,11 +1,14 @@
 package com.DTO;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "User")
-public class User {
+public class User implements Serializable{
     @Column(name = "id")
     @Id
     @GeneratedValue
@@ -20,7 +23,8 @@ public class User {
     @Column(name = "avatar")
     private String avatar;
 
-    @OneToMany(mappedBy = "user")
+    @JsonManagedReference
+    @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE, orphanRemoval=true)
     private List<Movie> movies;
 
     public int getId() {
