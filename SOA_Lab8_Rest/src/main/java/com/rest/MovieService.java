@@ -32,7 +32,7 @@ public class MovieService {
     @GET // This annotation indicates GET request
     @Produces("application/json")
     @Path("/")
-    public Response getMoviesByTitle(String title) {
+    public Response getMoviesByTitle(@QueryParam("title") String title) {
         return Response.status(200)
                 .entity(MovieDAO.getMovieByTitle(title))
                 .build();

@@ -1,6 +1,5 @@
 package com.rest;
 
-import com.DAO.UserDAO;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

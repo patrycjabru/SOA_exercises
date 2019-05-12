@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rest" />
+        <module name="RestClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="rest" target="1.5" />
+      <module name="RestClient" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

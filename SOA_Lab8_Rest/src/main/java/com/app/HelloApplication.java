@@ -1,12 +1,16 @@
 package com.app; // Note your package will be {{ groupId }}.rest
 
+import com.DTO.Movie;
 import com.rest.MovieService;
 import com.rest.OsobyService;
 import com.rest.UserService;
 
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
+
+@ApplicationPath("/")
 public class HelloApplication extends Application {
     private Set<Object> singletons = new HashSet<Object>();
     public HelloApplication() {
@@ -14,6 +18,7 @@ public class HelloApplication extends Application {
         singletons.add(new UserService());
         singletons.add(new MovieService());
         singletons.add(new OsobyService());
+
     }
     @Override
     public Set<Object> getSingletons() {
